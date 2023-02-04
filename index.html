@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip Calculator</title>
+</head>
+<body class="bg-blue-400 px-2">
+    <div class="bg-sky-800 rounded-lg p-10 sm:w-1/2 m-auto mt-20">
+        <!-- bill-section -->
+        <div class="mb-3">
+            <h1 class="text-white font-bold mb-2">Total Bill</h1>
+            <div class="p-2 bg-white rounded-md flex gap-1 items-center">
+                <h1 class="font-bold">$</h1>
+                <input id="total-bill" class="w-full outline-none " type="text" onkeyup="calculateBill()" placeholder="100">
+            </div>
+        </div>
+        <!-- tip-section -->
+        <div class="mb-6">
+            <h1 class="text-white font-bold mb-2">Total Tip</h1>
+            <div class="p-2 bg-white rounded-md flex gap-1 items-center">
+                <h1 class="font-bold">%</h1>
+                <input id="total-tip" class="w-full outline-none" type="text" onkeyup="calculateBill()" placeholder="10">
+            </div>
+        </div>
+        <!-- number_people -->
+        <div class="flex items-center justify-between">
+            <div>
+                <h3 class="text-white font-bold mb-2">Number Of People</h3>
+                <div class="flex items-center gap-4">
+                    <button class="px-4 py-2 text-lg rounded-full bg-white" type="button" onclick="increase()"> + </button>
+                    <h3 id="number-of-people" class="text-white font-bold">1</h3>
+                    <button class="px-5 py-2 text-lg rounded-full bg-white" type="button" onclick="decrease()"> - </button>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold">Total Amount</h3>
+                <h1 class="text-white font-bold text-lg">$ <span id="total-amount">0.00</span></h1>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
